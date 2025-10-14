@@ -13,7 +13,7 @@ app = FastAPI()
 # CORS setup
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000"],  # or your frontend URL
+    allow_origins=["https://maps-scraper-taupe.vercel.app/"],  # or your frontend URL
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"]

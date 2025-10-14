@@ -33,7 +33,7 @@ function App() {
     setResults([]);
 
     try {
-      const res = await fetch("http://localhost:8000/scrape", {
+      const res = await fetch("https://maps-scraper-xkk4.vercel.app/scrape", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ query }),
@@ -59,7 +59,7 @@ function App() {
 
   const downloadCSV = async () => {
     try {
-      const res = await fetch("http://localhost:8000/download_csv");
+      const res = await fetch("https://maps-scraper-xkk4.vercel.app/download_csv");
       if (!res.ok) throw new Error("Failed to download CSV");
 
       const blob = await res.blob();
